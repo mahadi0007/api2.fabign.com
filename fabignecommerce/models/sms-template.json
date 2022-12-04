@@ -1,0 +1,32 @@
+[
+  {
+    "module": "All Order",
+    "type": [
+      {
+        "name": "Order",
+        "status": [
+          "Order Received",
+          "Processing Order",
+          "Handed over to Courier",
+          "Delivery by Pathao",
+          "Delivery by RedX",
+          "Delivered",
+          "Cancelled",
+          "Returned",
+          "Exchanged"
+        ]
+      },
+      {
+        "name": "Order Payment",
+        "status": [
+          "Pending Payment",
+          "On hold",
+          "Paid",
+          "Payment Failed",
+          "Ready to Refund",
+          "Refunded"
+        ]
+      }
+    ]
+  }
+]
