@@ -17,7 +17,7 @@ const brandSchema = new Schema({
   products: [
     {
       type: Schema.Types.ObjectId,
-      ref: "ProductV2",
+      ref: "Product",
       default: [],
     },
   ],

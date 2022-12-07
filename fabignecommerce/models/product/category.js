@@ -1,43 +1,48 @@
-const { Schema, model } = require("mongoose")
+const { Schema, model } = require("mongoose");
 
-const categorySchema = new Schema({
+const categorySchema = new Schema(
+  {
     name: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true,
-        maxlength: 50
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
+      maxlength: 50,
     },
     banner: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
-    products: [{
+    products: [
+      {
         type: Schema.Types.ObjectId,
-        ref: 'ProductV2',
-        default: []
-    }],
+        ref: "Product",
+        default: [],
+      },
+    ],
     isActive: {
-        type: Boolean,
-        trim: true,
-        default: true,
-        enum: [true, false]
+      type: Boolean,
+      trim: true,
+      default: true,
+      enum: [true, false],
     },
     indexId: {
-        type: Number,
-        trim: true,
-        default: 0
+      type: Number,
+      trim: true,
+      default: 0,
     },
-    id:{
-        type: String,
-        default:""
+    id: {
+      type: String,
+      default: "",
     },
-    icon:{
-        type: String,
-        default: ""
-    }
-}, {
-    timestamps: true
-});
+    icon: {
+      type: String,
+      default: "",
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-module.exports = model('ItemCategory', categorySchema, "item_category")
+module.exports = model("ItemCategory", categorySchema, "item_category");

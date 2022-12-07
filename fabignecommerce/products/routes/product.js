@@ -1,6 +1,6 @@
 const route = require("express").Router();
 // const ProductController = require("../controller/product");
-const ProductControllerv2 = require("../controller/ProductV2");
+const ProductControllerv2 = require("../controller/Product");
 //const { Admin } = require("../../common/middleware/Permission");
 // const { Admin } = require("../../../api/middleware/permission.middleware");
 

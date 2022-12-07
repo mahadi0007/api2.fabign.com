@@ -1,24 +1,27 @@
-const { Schema, model } = require("mongoose")
+const { Schema, model } = require("mongoose");
 
-const additionalInfo = new Schema({
+const additionalInfo = new Schema(
+  {
     product: {
-        type: Schema.Types.ObjectId,
-        ref: 'ProductV2'
+      type: Schema.Types.ObjectId,
+      ref: "Product",
     },
-    info: [{
+    info: [
+      {
         title: {
-            type: String,
-            default: ''
+          type: String,
+          default: "",
         },
         description: {
-            type: String,
-            default: ''
-        }
-    }]
-},
-    {
-        timestamps: true
-    })
-
+          type: String,
+          default: "",
+        },
+      },
+    ],
+  },
+  {
+    timestamps: true,
+  }
+);
 
 module.exports = model("additionalInfo", additionalInfo);

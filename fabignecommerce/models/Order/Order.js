@@ -63,7 +63,7 @@ const OrderSchema = new Schema(
       {
         id: {
           type: Schema.Types.ObjectId,
-          ref: "ProductV2",
+          ref: "Product",
           required: true,
         },
         thumbnail: {
@@ -102,7 +102,7 @@ const OrderSchema = new Schema(
       {
         id: {
           type: Schema.Types.ObjectId,
-          ref: "ProductV2",
+          ref: "Product",
           required: true,
         },
         thumbnail: {

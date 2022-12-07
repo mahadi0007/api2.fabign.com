@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose");
 const stockHistorySchema = new Schema({
   product: {
     type: Schema.Types.ObjectId,
-    ref: "ProductV2",
+    ref: "Product",
     required: true,
   },
   variationId: {
